@@ -1,6 +1,6 @@
     async function loadProducts() {
       try {
-        const response = await fetch('http://localhost/api/products');
+        const response = await fetch('http://a9f23146e22ec460b9aefdf7cd3b5690-917679185.eu-north-1.elb.amazonaws.com/api/products');
         const products = await response.json();
         const tbody = document.querySelector('#productsTable tbody');
         tbody.innerHTML = '';
