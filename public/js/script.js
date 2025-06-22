@@ -1,6 +1,7 @@
+    const baseUrl ="http://a4aa0eeedaa634311afa7e282a825d2b-564280441.eu-north-1.elb.amazonaws.com";
     async function loadProducts() {
       try {
-        const response = await fetch('http://a9f23146e22ec460b9aefdf7cd3b5690-917679185.eu-north-1.elb.amazonaws.com/api/products');
+        const response = await fetch(baseUrl+'/api/products');
         const products = await response.json();
         const tbody = document.querySelector('#productsTable tbody');
         tbody.innerHTML = '';
